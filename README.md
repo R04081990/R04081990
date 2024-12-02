@@ -1,12 +1,8 @@
-- 👋 Hi, I’m @R04081990
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+let queryContext = CSUserQueryContext()
+queryContext.fetchAttributes = ["title", "textContent", "authorNames", "contentDescription"]
+queryContext.maxSuggestionCount = 10
+queryContext.enableRankedResults = true
 
-<!---
-R04081990/R04081990 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+
+let query = CSUserQuery(userQueryString: searchText, userQueryContext: queryContext)
+
